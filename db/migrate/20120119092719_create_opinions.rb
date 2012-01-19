@@ -8,6 +8,6 @@ class CreateOpinions < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :opinions, :issue_id
+    add_index :opinions, [:issue_id, :name], unique: true
   end
 end
