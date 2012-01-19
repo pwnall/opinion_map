@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120119072644) do
+ActiveRecord::Schema.define(:version => 20120119092719) do
 
   create_table "issues", :force => true do |t|
     t.string   "name"
@@ -19,5 +19,16 @@ ActiveRecord::Schema.define(:version => 20120119072644) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "opinions", :force => true do |t|
+    t.integer  "issue_id"
+    t.boolean  "positive"
+    t.string   "name"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "opinions", ["issue_id"], :name => "index_opinions_on_issue_id"
 
 end
