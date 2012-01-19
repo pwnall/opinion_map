@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :issue %><br />
-    <%= f.text_field :issue %>
+    <%= f.label :issue_id, 'Issue' %><br />
+    <%= f.collection_select :issue_id, Issue.where(:closed => false).all, :id, :name  %>
   </div>
   <div class="field">
     <%= f.label :positive %><br />
