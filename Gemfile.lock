@@ -40,6 +40,7 @@ GEM
     erubis (2.7.0)
     execjs (1.2.13)
       multi_json (~> 1.0)
+    geocoder (1.1.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.0)
@@ -107,6 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.0)
+  geocoder
   jquery-rails
   rails (= 3.2.0.rc2)
   sass-rails (~> 3.2.3)
