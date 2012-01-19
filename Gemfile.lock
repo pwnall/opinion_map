@@ -55,6 +55,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    pg (0.12.2)
     polyglot (0.3.3)
     rack (1.4.0)
     rack-cache (1.1)
@@ -110,6 +111,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.0)
   geocoder
   jquery-rails
+  pg
   rails (= 3.2.0.rc2)
   sass-rails (~> 3.2.3)
   sqlite3
