@@ -25,6 +25,11 @@ class OpinionsController < ApplicationController
   # POST /opinions.json
   def create
     @opinion = Opinion.new(params[:opinion])
+    unless @opinion.city.blank?
+      result = Geocoder.search(@opinion.city).first
+      @opinion.lat = result.latitude
+      @opinion.lng = result.longitude
+    end
 
     respond_to do |format|
       if @opinion.save
