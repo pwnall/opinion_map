@@ -13,7 +13,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.0'
-
+  gem 'therubyracer', '>= 0.9.9'
   gem 'uglifier', '>= 1.0.3'
 end
 
