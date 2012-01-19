@@ -2,7 +2,7 @@ class OpinionsController < ApplicationController
   # GET /opinions
   # GET /opinions.json
   def index
-    @opinions = Opinion.all
+    @opinions = Opinion.order('id DESC').all
 
     respond_to do |format|
       format.html # index.html.erb
