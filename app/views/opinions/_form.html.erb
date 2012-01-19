@@ -24,6 +24,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :city, 'US City' %><br />
+    <%= f.text_field :city, :class => 'location-input' %>
+  </div>
+  <div class="field">
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </div>

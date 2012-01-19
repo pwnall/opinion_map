@@ -4,6 +4,9 @@ class CreateOpinions < ActiveRecord::Migration
       t.references :issue
       t.boolean :positive
       t.string :name
+      t.string :city
+      t.decimal :lat, precision: 15, scale: 10
+      t.decimal :lng, precision: 15, scale: 10
       t.text :comment
 
       t.timestamps
