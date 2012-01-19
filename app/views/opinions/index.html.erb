@@ -1,25 +1,28 @@
 <h1>Listing opinions</h1>
 
-<table>
-  <tr>
-    <th>Issue</th>
-    <th>Opinion</th>
-    <th>Name</th>
-    <th>Comment</th>
-    <th></th>
-  </tr>
+<p class="action-call">
+  <%= link_to 'Share your opinion', new_opinion_path %>
+</p>
 
+<ol id="opinion-list">
 <% @opinions.each do |opinion| %>
-  <tr>
-    <td><%= opinion.issue.name %></td>
-    <td><%= opinion.positive ? 'For' : 'Against' %></td>
-    <td><%= opinion.name %></td>
-    <td><%= opinion.comment %></td>
-    <td><%= link_to 'Report', opinion, confirm: 'Is this hateful speech or SPAM?', method: :delete %></td>
-  </tr>
+  <% if opinion.positive? %>
+  <li class="positive">
+    <p class="heading">
+      <span class="name"><%= opinion.name %></span>
+      supports
+  <% else %>
+  <li class="negative">
+    <p class="heading">
+      <span class="name"><%= opinion.name %></span>
+      is against
+  <% end %>
+      <span class="issue"><%= opinion.issue.name %></span>.
+      <%= link_to 'Report', opinion, confirm: 'Is this hateful speech or SPAM?', method: :delete %>
+    </p>
+    <p class="comment">
+      <%= opinion.comment %>
+    </p>
+  </li>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Opinion', new_opinion_path %>
+</ol>
