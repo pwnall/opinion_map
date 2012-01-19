@@ -1,4 +1,6 @@
 OpinionMap::Application.routes.draw do
+  resources :opinions
+
   resources :issues
 
   # The priority is based upon order of creation:

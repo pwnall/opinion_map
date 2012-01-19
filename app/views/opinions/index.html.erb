@@ -1,0 +1,29 @@
+<h1>Listing opinions</h1>
+
+<table>
+  <tr>
+    <th>Issue</th>
+    <th>Positive</th>
+    <th>Name</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @opinions.each do |opinion| %>
+  <tr>
+    <td><%= opinion.issue %></td>
+    <td><%= opinion.positive %></td>
+    <td><%= opinion.name %></td>
+    <td><%= opinion.comment %></td>
+    <td><%= link_to 'Show', opinion %></td>
+    <td><%= link_to 'Edit', edit_opinion_path(opinion) %></td>
+    <td><%= link_to 'Destroy', opinion, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Opinion', new_opinion_path %>
