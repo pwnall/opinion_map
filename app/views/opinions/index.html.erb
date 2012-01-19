@@ -32,5 +32,8 @@
       <%= opinion.comment %>
     </p>
   </li>
+  <script type="text/javascript">
+    addPin(<%= opinion.to_json.html_safe %>);
+  </script>
 <% end %>
 </ol>
