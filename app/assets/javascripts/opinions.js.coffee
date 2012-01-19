@@ -9,3 +9,12 @@ $ ->
     geocoder = new google.maps.Geocoder
     geocoder.geocode {latLng: new google.maps.LatLng(lat, lng)}, (results) ->
       $('.location-input').val results[0].formatted_address
+
+$ ->
+  mapContainer = document.querySelector '#map-container'
+  options = {
+    zoom: 4,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: new google.maps.LatLng(38, -97)
+  }
+  map = mapContainer and new google.maps.Map(mapContainer, options)
