@@ -3,23 +3,19 @@
 <table>
   <tr>
     <th>Issue</th>
-    <th>Positive</th>
+    <th>Opinion</th>
     <th>Name</th>
     <th>Comment</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @opinions.each do |opinion| %>
   <tr>
     <td><%= opinion.issue.name %></td>
-    <td><%= opinion.positive %></td>
+    <td><%= opinion.positive ? 'For' : 'Against' %></td>
     <td><%= opinion.name %></td>
     <td><%= opinion.comment %></td>
-    <td><%= link_to 'Show', opinion %></td>
-    <td><%= link_to 'Edit', edit_opinion_path(opinion) %></td>
-    <td><%= link_to 'Destroy', opinion, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Report', opinion, confirm: 'Is this hateful speech or SPAM?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
