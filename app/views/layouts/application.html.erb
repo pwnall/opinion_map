@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>OpinionMap</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>  
   <%= javascript_include_tag "application" %>
+  <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC5P22AUZEsxbduPH70sDh5z1DKTOAw07g&sensor=true">
+  </script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
