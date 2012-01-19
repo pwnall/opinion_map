@@ -5,17 +5,13 @@
     <th>Name</th>
     <th>Closed</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @issues.each do |issue| %>
   <tr>
     <td><%= issue.name %></td>
     <td><%= issue.closed %></td>
-    <td><%= link_to 'Show', issue %></td>
-    <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-    <td><%= link_to 'Destroy', issue, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Close', issue, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
