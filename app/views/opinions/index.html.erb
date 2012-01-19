@@ -13,7 +13,7 @@
 
 <% @opinions.each do |opinion| %>
   <tr>
-    <td><%= opinion.issue %></td>
+    <td><%= opinion.issue.name %></td>
     <td><%= opinion.positive %></td>
     <td><%= opinion.name %></td>
     <td><%= opinion.comment %></td>
