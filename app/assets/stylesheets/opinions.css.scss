@@ -50,7 +50,13 @@ ol#opinion-list {
       &.heading {
         font-size: 1.2em;
         font-weight: bold;
+        .time {
+          font-size: 0.8em;
+          font-weight: normal;
+          font-style: italic;
+        }
         a {
+          font-size: 0.8em;
           font-weight: normal;
         }
       }

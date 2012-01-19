@@ -18,6 +18,7 @@
       is against
   <% end %>
       <span class="issue"><%= opinion.issue.name %></span>.
+      <span class="time"><%= time_ago_in_words opinion.created_at %> ago</span>
       <%= link_to 'Report', opinion, confirm: 'Is this hateful speech or SPAM?', method: :delete %>
     </p>
     <p class="comment">
