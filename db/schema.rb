@@ -24,11 +24,14 @@ ActiveRecord::Schema.define(:version => 20120119092719) do
     t.integer  "issue_id"
     t.boolean  "positive"
     t.string   "name"
+    t.string   "city"
+    t.decimal  "lat",        :precision => 15, :scale => 10
+    t.decimal  "lng",        :precision => 15, :scale => 10
     t.text     "comment"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
-  add_index "opinions", ["issue_id"], :name => "index_opinions_on_issue_id"
+  add_index "opinions", ["issue_id", "name"], :name => "index_opinions_on_issue_id_and_name", :unique => true
 
 end
